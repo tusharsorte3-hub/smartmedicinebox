@@ -1,119 +1,36 @@
-*{
+function updateTime(){
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+let now=new Date();
 
-}
-
-body{
-
-background:#f2f7ff;
+document.getElementById("time").innerHTML=
+now.toLocaleString();
 
 }
 
-header{
+setInterval(updateTime,1000);
 
-background:#1565c0;
-color:white;
+updateTime();
 
-padding:20px;
+function openDoor(){
 
-text-align:center;
+document.getElementById("doorStatus").innerHTML="Opened";
 
-}
-
-#time{
-
-margin-top:10px;
-
-font-size:20px;
+alert("Medicine Box Opened");
 
 }
 
-.container{
+function closeDoor(){
 
-width:90%;
+document.getElementById("doorStatus").innerHTML="Closed";
 
-max-width:1000px;
-
-margin:20px auto;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:20px;
+alert("Medicine Box Closed");
 
 }
 
-.card{
+function stopAlarm(){
 
-background:white;
+document.getElementById("alarmStatus").innerHTML="OFF";
 
-padding:20px;
-
-border-radius:10px;
-
-box-shadow:0 5px 10px rgba(0,0,0,.2);
-
-}
-
-.card h2{
-
-margin-bottom:15px;
-
-color:#1565c0;
-
-}
-
-.card p{
-
-margin:12px 0;
-
-font-size:18px;
-
-}
-
-button{
-
-width:100%;
-
-padding:12px;
-
-margin-top:10px;
-
-font-size:17px;
-
-background:#1565c0;
-
-color:white;
-
-border:none;
-
-border-radius:6px;
-
-cursor:pointer;
-
-}
-
-button:hover{
-
-background:#0d47a1;
-
-}
-
-footer{
-
-text-align:center;
-
-padding:20px;
-
-background:#1565c0;
-
-color:white;
-
-margin-top:20px;
+alert("Alarm Stopped");
 
 }
