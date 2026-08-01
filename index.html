@@ -1,151 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Smart Medicine Box</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<div class="background"></div>
+<header>
 
-<nav>
+<h1>💊 Smart Medicine Box</h1>
 
-<div class="logo">
-
-💊 Smart Medicine Box
-
+<div id="time">
+Loading Time...
 </div>
 
-<ul>
+</header>
 
-<li><a href="#">Home</a></li>
-
-<li><a href="#">Dashboard</a></li>
-
-<li><a href="#">Medicine</a></li>
-
-<li><a href="#">History</a></li>
-
-<li><a href="#">Settings</a></li>
-
-</ul>
-
-</nav>
-
-<section class="hero">
-
-<h1>
-
-Smart Medicine Box
-
-</h1>
-
-<p>
-
-Your Personal Healthcare Assistant
-
-</p>
-
-<div id="clock">
-
-00:00:00
-
-</div>
-
-</section>
-
-<section class="cards">
+<div class="container">
 
 <div class="card">
 
-<h2>💊 Medicine</h2>
+<h2>Medicine Information</h2>
 
-<p id="medicineName">
+<p><b>Medicine :</b>
+<span id="medicine">Paracetamol</span></p>
 
-Paracetamol
+<p><b>Time :</b>
+<span id="medicineTime">08:00 AM</span></p>
 
-</p>
+<p><b>Status :</b>
+<span id="status">Waiting</span></p>
 
 </div>
 
 <div class="card">
 
-<h2>⏰ Time</h2>
+<h2>ESP32 Status</h2>
 
-<p id="medicineTime">
+<p>Connection :
+<span id="espStatus">Disconnected</span></p>
 
-08:00 AM
+<p>Door :
+<span id="doorStatus">Closed</span></p>
 
-</p>
+<p>RFID :
+<span id="rfidStatus">Waiting</span></p>
 
-</div>
-
-<div class="card">
-
-<h2>📦 Door</h2>
-
-<p id="doorStatus">
-
-Closed
-
-</p>
+<p>Alarm :
+<span id="alarmStatus">OFF</span></p>
 
 </div>
 
 <div class="card">
 
-<h2>🪪 RFID</h2>
+<h2>Sensor Status</h2>
 
-<p id="rfidStatus">
+<p>Touch :
+<span id="touchStatus">Waiting</span></p>
 
-Waiting
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>🔔 Alarm</h2>
-
-<p id="alarmStatus">
-
-OFF
-
-</p>
+<p>Ultrasonic :
+<span id="distance">0 cm</span></p>
 
 </div>
 
 <div class="card">
 
-<h2>📡 ESP32</h2>
+<h2>Control Panel</h2>
 
-<p id="espStatus">
+<button onclick="openDoor()">
+Open Box
+</button>
 
-Offline
+<button onclick="closeDoor()">
+Close Box
+</button>
 
-</p>
+<button onclick="stopAlarm()">
+Stop Alarm
+</button>
 
 </div>
 
-</section>
+</div>
 
 <footer>
 
-Made by Tushar Sorte ❤️
+Developed By Tushar Sorte
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
