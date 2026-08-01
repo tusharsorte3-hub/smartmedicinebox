@@ -73,19 +73,31 @@ Loading Time...
 
 <div class="card">
 
-<h2>Control Panel</h2>
+<h2>Medicine Schedule</h2>
 
-<button onclick="openDoor()">
-Open Box
-</button>
+<input type="text" id="medicineNameInput" placeholder="Medicine Name">
 
-<button onclick="closeDoor()">
-Close Box
-</button>
+<input type="time" id="medicineTimeInput">
 
-<button onclick="stopAlarm()">
-Stop Alarm
-</button>
+<button onclick="addMedicine()">Add Medicine</button>
+
+<table id="medicineTable">
+
+<thead>
+
+<tr>
+<th>Medicine</th>
+<th>Time</th>
+<th>Delete</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
 
 </div>
 
